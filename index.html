@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,13 +7,23 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <div class="container">
+    <main class="container">
         <h1>Meu Bloco de Notas</h1>
         <p>Suas anotações são salvas automaticamente no seu navegador.</p>
-        
-        <textarea id="blocoDeNotas" placeholder="Comece a digitar aqui..."></textarea>
-    </div>
+
+        <div class="toolbar">
+            <button id="salvarNotas" type="button">Salvar</button>
+            <button id="limparNotas" type="button">Limpar</button>
+            <div id="statusSalvar" role="status" aria-live="polite">Salvo automaticamente</div>
+        </div>
+
+        <label for="blocoDeNotas" class="sr-only">Área de anotações</label>
+        <textarea id="blocoDeNotas" placeholder="Comece a digitar aqui..." aria-label="Área de anotações"></textarea>
+    </main>
+
+    <noscript>
+        <p>Ative o JavaScript para usar o bloco de notas.</p>
+    </noscript>
 
     <script src="script.js"></script>
 </body>
